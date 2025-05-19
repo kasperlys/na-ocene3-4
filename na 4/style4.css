@@ -1,0 +1,144 @@
+/* Globalne zmienne */
+:root {
+    --color-primary: #d23669;
+    --color-primary-dark: #a52a52;
+    --color-error: #ff0000;
+    --color-text: #333;
+    --color-light: #f9f3f3;
+    --shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset i podstawowe style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-light);
+    margin: 0;
+    padding: 20px;
+    color: var(--color-text);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Nagłówek */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header__title {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.header__subtitle {
+    color: #666;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+/* Formularz */
+.order-form {
+    margin-top: 20px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section__title {
+    color: var(--color-primary);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: var(--color-error);
+    font-size: 0.8em;
+    margin-top: 5px;
+    height: 15px;
+}
+
+/* Przyciski */
+.btn {
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn--primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Podsumowanie (dla 4.0) */
+.order-summary {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+}
+
+.order-summary__title {
+    color: var(--color-primary);
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.order-summary__content p {
+    margin: 8px 0;
+}
+
+.order-summary__total {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 15px;
+    color: var(--color-primary);
+}

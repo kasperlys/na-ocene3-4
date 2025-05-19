@@ -1,0 +1,97 @@
+/* Stylizacja podstawowa strony */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f3f3; /* Delikatny różowy odcień tła */
+    margin: 0;
+    padding: 20px;
+    color: #333; /* Ciemnoszary kolor tekstu */
+}
+
+/* Główny kontener zawartości */
+#container {
+    max-width: 800px; /* Maksymalna szerokość kontenera */
+    margin: 0 auto; /* Wyśrodkowanie kontenera */
+    background-color: white; /* Białe tło formularza */
+    padding: 30px; /* Wewnętrzny odstęp */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+}
+
+/* Nagłówek główny */
+h1 {
+    color: #d23669; /* Ciemnoróżowy kolor */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Podtytuł */
+h2 {
+    color: #666; /* Szary kolor */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+/* Nagłówki sekcji */
+h3 {
+    color: #d23669; /* Spójny różowy kolor */
+    border-bottom: 1px solid #eee; /* Linia oddzielająca */
+    padding-bottom: 5px;
+}
+
+/* Grupa pól formularza */
+.form-group {
+    margin-bottom: 15px; /* Odstęp między grupami */
+}
+
+/* Etykiety pól */
+label {
+    display: block; /* Każda etykieta w nowej linii */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Wspólne style dla pól input */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%; /* Pełna szerokość kontenera */
+    padding: 10px; /* Wewnętrzny odstęp */
+    border: 1px solid #ddd; /* Szara ramka */
+    border-radius: 4px; /* Lekko zaokrąglone rogi */
+    box-sizing: border-box; /* Uwzględnienie paddingu w szerokości */
+}
+
+/* Style dla radio buttonów */
+input[type="radio"] {
+    margin-right: 10px; /* Odstęp od etykiety */
+}
+
+/* Przycisk wysyłania formularza */
+#submit-btn {
+    background-color: #d23669; /* Ciemnoróżowy kolor */
+    color: white; /* Biały tekst */
+    border: none; /* Brak obramowania */
+    padding: 12px 20px; /* Wewnętrzny odstęp */
+    font-size: 16px; /* Rozmiar czcionki */
+    border-radius: 4px; /* Zaokrąglone rogi */
+    cursor: pointer; /* Kursor wskazujący */
+    width: 100%; /* Pełna szerokość */
+    margin-top: 20px; /* Odstęp od góry */
+    transition: background-color 0.3s; /* Płynna zmiana koloru */
+}
+
+/* Efekt hover na przycisku */
+#submit-btn:hover {
+    background-color: #a52a52; /* Ciemniejszy odcień różu */
+}
+
+/* Komunikaty o błędach */
+.error-message {
+    color: #ff0000; /* Czerwony kolor tekstu */
+    font-size: 0.8em; /* Mniejsza czcionka */
+    margin-top: 5px; /* Odstęp od pola */
+    height: 15px; /* Stała wysokość aby uniknąć przeskoków */
+}

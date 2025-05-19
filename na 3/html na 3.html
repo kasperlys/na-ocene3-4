@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Podstawowe meta tagi -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwiaciarnia - Zamów bukiet</title>
+    <!-- Podłączenie pliku CSS -->
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <!-- Główny kontener strony -->
+    <div id="container">
+        <!-- Nagłówek strony -->
+        <h1>Kwiaciarnia "Kwiatowy Raj"</h1>
+        <h2>Zamów swój wymarzony bukiet</h2>
+        
+        <!-- Formularz zamówienia -->
+        <form id="order-form">
+            <!-- Sekcja wyboru bukietu -->
+            <div id="bouquet-selection">
+                <h3>Wybierz rodzaj bukietu:</h3>
+                
+                <!-- Opcja 1: Różowy różany -->
+                <div class="form-group">
+                    <input type="radio" id="bouquet1" name="bouquet-type" value="różowy różany">
+                    <label for="bouquet1">Różowy różany - 120 zł</label>
+                </div>
+                
+                <!-- Opcja 2: Biały lilak -->
+                <div class="form-group">
+                    <input type="radio" id="bouquet2" name="bouquet-type" value="biały lilak">
+                    <label for="bouquet2">Biały lilak - 90 zł</label>
+                </div>
+                
+                <!-- Opcja 3: Bordowe chryzantemy -->
+                <div class="form-group">
+                    <input type="radio" id="bouquet3" name="bouquet-type" value="bordowe chryzantemy">
+                    <label for="bouquet3">Bordowe chryzantemy - 80 zł</label>
+                </div>
+                
+                <!-- Pole na błąd wyboru bukietu -->
+                <div id="bouquet-error" class="error-message"></div>
+            </div>
+            
+            <!-- Pole wyboru ilości -->
+            <div class="form-group">
+                <label for="quantity">Ilość:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                <div id="quantity-error" class="error-message"></div>
+            </div>
+            
+            <!-- Sekcja danych kontaktowych -->
+            <div id="customer-info">
+                <h3>Dane kontaktowe:</h3>
+                
+                <!-- Pole imienia -->
+                <div class="form-group">
+                    <label for="first-name">Imię:</label>
+                    <input type="text" id="first-name" name="first-name">
+                    <div id="first-name-error" class="error-message"></div>
+                </div>
+                
+                <!-- Pole nazwiska -->
+                <div class="form-group">
+                    <label for="last-name">Nazwisko:</label>
+                    <input type="text" id="last-name" name="last-name">
+                    <div id="last-name-error" class="error-message"></div>
+                </div>
+                
+                <!-- Pole telefonu -->
+                <div class="form-group">
+                    <label for="phone">Numer telefonu:</label>
+                    <input type="tel" id="phone" name="phone">
+                    <div id="phone-error" class="error-message"></div>
+                </div>
+                
+                <!-- Pole email -->
+                <div class="form-group">
+                    <label for="email">Adres email:</label>
+                    <input type="email" id="email" name="email">
+                    <div id="email-error" class="error-message"></div>
+                </div>
+            </div>
+            
+            <!-- Przycisk wysłania formularza -->
+            <button type="submit" id="submit-btn">Złóż zamówienie</button>
+        </form>
+    </div>
+
+    <!-- Podłączenie pliku JavaScript -->
+    <script src="na3.js"></script>
+</body>
+</html>

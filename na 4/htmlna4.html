@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwiaciarnia - Zamówienie (Ocena 3.0 + 4.0)</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">Kwiaciarnia "Kwiatowy Raj"</h1>
+            <h2 class="header__subtitle">Zamów swój wymarzony bukiet</h2>
+        </header>
+
+        <main class="main-content">
+            <form class="order-form" id="order-form">
+                <!-- Sekcja bukietów -->
+                <div class="form-section">
+                    <h3 class="form-section__title">Wybierz rodzaj bukietu:</h3>
+                    
+                    <div class="form-group">
+                        <input type="radio" id="bouquet1" name="bouquet-type" value="różowy różany" data-price="120">
+                        <label for="bouquet1">Różowy różany - 120 zł</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="radio" id="bouquet2" name="bouquet-type" value="biały lilak" data-price="90">
+                        <label for="bouquet2">Biały lilak - 90 zł</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="radio" id="bouquet3" name="bouquet-type" value="bordowe chryzantemy" data-price="80">
+                        <label for="bouquet3">Bordowe chryzantemy - 80 zł</label>
+                    </div>
+                    
+                    <div class="error-message" id="bouquet-error"></div>
+                </div>
+                
+                <!-- Sekcja ilości -->
+                <div class="form-group">
+                    <label for="quantity">Ilość:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                    <div class="error-message" id="quantity-error"></div>
+                </div>
+                
+                <!-- Sekcja dodatkowych usług (dla 4.0) -->
+                <div class="form-section">
+                    <h3 class="form-section__title">Dodatkowe usługi:</h3>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="delivery" name="delivery" data-price="20">
+                        <label for="delivery">Dostawa (+20 zł)</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="decoration" name="decoration" data-price="30">
+                        <label for="decoration">Dekoracja (+30 zł)</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="wishes" name="wishes" data-price="10">
+                        <label for="wishes">Kartka z życzeniami (+10 zł)</label>
+                    </div>
+                </div>
+                
+                <!-- Sekcja danych kontaktowych -->
+                <div class="form-section">
+                    <h3 class="form-section__title">Dane kontaktowe:</h3>
+                    
+                    <div class="form-group">
+                        <label for="first-name">Imię:</label>
+                        <input type="text" id="first-name" name="first-name">
+                        <div class="error-message" id="first-name-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="last-name">Nazwisko:</label>
+                        <input type="text" id="last-name" name="last-name">
+                        <div class="error-message" id="last-name-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Numer telefonu:</label>
+                        <input type="tel" id="phone" name="phone">
+                        <div class="error-message" id="phone-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Adres email:</label>
+                        <input type="email" id="email" name="email">
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                </div>
+                
+                <!-- Sekcja podsumowania (dla 4.0) -->
+                <div class="order-summary">
+                    <h3 class="order-summary__title">Podsumowanie zamówienia</h3>
+                    <div class="order-summary__content">
+                        <p>Wybrane produkty: <span id="summary-products">-</span></p>
+                        <p>Dodatkowe usługi: <span id="summary-services">-</span></p>
+                        <p class="order-summary__total">Łączna kwota: <span id="summary-total">0 zł</span></p>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn--primary">Złóż zamówienie</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="na4.js"></script>
+</body>
+</html>
