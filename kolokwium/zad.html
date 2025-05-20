@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turniej Carcassonne - Zapis</title>
+    <link rel="stylesheet" href="zad.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zapisy na Turniej Carcassonne</h1>
+        
+        <div class="wood-texture">
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="fullName">Imię i nazwisko:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Wiek:</label>
+                    <input type="number" id="age" name="age" min="8" max="99" required>
+                    <div id="ageError" class="error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Adres e-mail:</label>
+                    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    <div id="emailError" class="error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="skillLevel">Poziom zaawansowania:</label>
+                    <select id="skillLevel" name="skillLevel" required>
+                        <option value="">-- Wybierz poziom --</option>
+                        <option value="beginner">Początkujący</option>
+                        <option value="intermediate">Średniozaawansowany</option>
+                        <option value="advanced">Zaawansowany</option>
+                    </select>
+                </div>
+
+                <div class="form-group"></div>
+                    <label for="pakiet_startowy">wybierz pakiet startowy:</label>
+                    <select id="pakiet_startowy" name="pakiet_startowy" required>
+                        <option value="">-- Wybierz poziom --</option>
+                        <option value="standardowy">standartowy</option>
+                        <option value="standart+">z pamiątkową koszulką</option>
+                        <option value="dls"> z dls(z dodatkiem do gry)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tournamentDate">Termin turnieju:</label>
+                    <select id="tournamentDate" name="tournamentDate" required>
+                        <option value="">-- Wybierz termin --</option>
+                        <option value="2023-06-10">10 czerwca 2023</option>
+                        <option value="2023-06-17">17 czerwca 2023</option>
+                        <option value="2023-06-24">24 czerwca 2023</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Akceptuję regulamin turnieju</label>
+                    </div>
+                </div>
+                
+                <div class="fee-display" id="feeDisplay">
+                    Wpisowe: 20 PLN
+                </div>
+                
+                <button type="submit">Zapisz się</button>
+            </form>
+            
+            <div class="success-message" id="successMessage">
+                Dziękujemy za zgłoszenie! Potwierdzenie zostało wysłane na podany adres e-mail.
+            </div>
+        </div>
+    </div>
+
+    <script src="zad2.js"></script>
+</body>
+</html>

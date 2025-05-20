@@ -9,10 +9,10 @@ document.getElementById('order-form').addEventListener('submit', function(event)
     // Flaga walidacji
     let isValid = true;
     
-    // Walidacja wyboru bukietu
-    const bouquetSelected = document.querySelector('input[name="bouquet-type"]:checked');
+    // Walidacja wyboru bukie
+    const bouquetSelected = document.querySelector('input[name="TYPE-POZIOM"]:checked');
     if (!bouquetSelected) {
-        document.getElementById('bouquet-error').textContent = 'Proszę wybrać rodzaj bukietu';
+        document.getElementById('poziom-error').textContent = 'prosze wybrac poziom zaawansowania';
         isValid = false;
     }
     
@@ -38,9 +38,9 @@ document.getElementById('order-form').addEventListener('submit', function(event)
     }
     
     // Walidacja telefonu
-    const phone = document.getElementById('phone').value;
+    const phone = document.getElementById('wiek').value;
     if (!phone.trim()) {
-        document.getElementById('phone-error').textContent = 'Proszę podać numer telefonu';
+        document.getElementById('wiek-error').textContent = 'Proszę podać wiek';
         isValid = false;
     }
     

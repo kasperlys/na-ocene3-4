@@ -1,0 +1,115 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F2CA99;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-size: 100px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 5px ;
+}
+
+h1 {
+    color: #0367A6;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #0367A6;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #28A94D;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #BF2A37;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 0;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #9C1F2D;
+}
+
+.fee-display {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #0367A6;
+    font-weight: bold;
+}
+
+.error {
+    color: #BF2A37;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    color: #28A94D;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.wood-texture {
+    position: relative;
+    padding: 20px;
+    background-color: #F2CA99;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
