@@ -14,7 +14,7 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    border: 5px ;
+    border: 5px 
 }
 
 h1 {
@@ -81,14 +81,6 @@ button:hover {
     background-color: #9C1F2D;
 }
 
-.fee-display {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
-    color: #0367A6;
-    font-weight: bold;
-}
-
 .error {
     color: #BF2A37;
     font-size: 14px;
@@ -107,9 +99,102 @@ button:hover {
 .wood-texture {
     position: relative;
     padding: 20px;
-    background-color: #F2CA99;
+    background-color: #D2B48C;
     border-radius: 10px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 }
 
+.wood-texture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%);
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+/* Nowe style dla pakietów startowych */
+.starter-packages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.package-option {
+    display: flex;
+    align-items: center;
+}
+
+.package-option input[type="radio"] {
+    display: none;
+}
+
+.package-label {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 2px solid #0367A6;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.package-option input[type="radio"]:checked + .package-label {
+    background-color: #0367A6;
+    color: white;
+    border-color: #0284C6;
+}
+
+.package-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.package-price {
+    color: #BF2A37;
+    font-weight: bold;
+}
+
+.package-option input[type="radio"]:checked + .package-label .package-price {
+    color: #FFD700;
+}
+
+.package-desc {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.package-option input[type="radio"]:checked + .package-label .package-desc {
+    color: #EEE;
+}
+
+/* Style dla podsumowania kosztów */
+.fee-summary {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #28A94D;
+}
+
+.fee-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.total-fee {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #BF2A37;
+    text-align: right;
+    padding-top: 10px;
+    border-top: 1px dashed #0367A6;
+}

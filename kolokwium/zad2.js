@@ -1,46 +1,59 @@
 document.addEventListener('DOMContentLoaded', function() {
     const registrationForm = document.getElementById('registrationForm');
     const skillLevelSelect = document.getElementById('skillLevel');
-    const feeDisplay = document.getElementById('feeDisplay');
+    const packageOptions = document.querySelectorAll('input[name="starterPackage"]');
+    const baseFeeElement = document.getElementById('baseFee');
+    const packageFeeElement = document.getElementById('packageFee');
+    const totalFeeElement = document.getElementById('totalFee');
     const successMessage = document.getElementById('successMessage');
 
-    // Calculate fee based on skill level
-    skillLevelSelect.addEventListener('change', function() {
-        const skillLevel = this.value;
-        let fee = 20; // default fee
+    // Słownik z kosztami pakietów
+    const packagePrices = {
+        basic: 0,
+        standard: 15,
+        premium: 30
+    };
+
+    // Słownik z kosztami poziomów
+    const levelPrices = {
+        beginner: 20,
+        intermediate: 25,
+        advanced: 30
+    };
+
+    // Obliczanie i aktualizacja kosztów
+    function updateFees() {
+        const selectedLevel = skillLevelSelect.value;
+        const selectedPackage = document.querySelector('input[name="starterPackage"]:checked').value;
         
-        if (skillLevel === 'intermediate') {
-            fee = 25;
-        } else if (skillLevel === 'advanced') {
-            fee = 30;
+        let baseFee = 0;
+        if (selectedLevel) {
+            baseFee = levelPrices[selectedLevel];
         }
         
-        feeDisplay.textContent = `Wpisowe: ${fee} PLN`;
+        const packageFee = packagePrices[selectedPackage];
+        const totalFee = baseFee + packageFee;
+        
+        baseFeeElement.textContent = baseFee;
+        packageFeeElement.textContent = packageFee;
+        totalFeeElement.textContent = totalFee;
+    }
+
+    // Nasłuchiwanie zmian w formularzu
+    skillLevelSelect.addEventListener('change', updateFees);
+    
+    packageOptions.forEach(option => {
+        option.addEventListener('change', updateFees);
     });
 
-    //Calculate fea based on dls
-    pakiet_startowySelect.addEventListener('change', function(){
-        const pakiet_startowy = this.value;
-        let fee = 20
+    // Inicjalne obliczenie kosztów
+    updateFees();
 
-        if(pakiet_startowy === 'standardowy') {
-            fee = 30;
-        }
-        if (pakiet_startowy === 'standart+'){
-            fee = 40
-        }
-        if (pakiet_startowy === 'dls') {
-            fee = 50
-        }
-
-        
-    })
-
-    // Form submission handling
+    // Walidacja i wysłanie formularza
     registrationForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Validate age
+        // Walidacja wieku
         const ageInput = document.getElementById('age');
         const age = parseInt(ageInput.value);
         const ageError = document.getElementById('ageError');
@@ -55,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ageError.textContent = '';
         }
         
-        // Validate email
+        // Walidacja emaila
         const emailInput = document.getElementById('email');
         const emailPattern = new RegExp(emailInput.pattern);
         const emailError = document.getElementById('emailError');
@@ -67,18 +80,17 @@ document.addEventListener('DOMContentLoaded', function() {
             emailError.textContent = '';
         }
         
-        // Check terms checkbox
+        // Sprawdzenie akceptacji regulaminu
         const termsCheckbox = document.getElementById('terms');
         if (!termsCheckbox.checked) {
             alert('Proszę zaakceptować regulamin');
             return;
         }
         
-        // If all validations pass, show success message
+        // Jeśli walidacja przebiegła pomyślnie
         registrationForm.style.display = 'none';
         successMessage.style.display = 'block';
         
-        // Here you would typically send the data to a server
-        // For this example, we'll just show the success message
+        // Tutaj można dodać kod wysyłający dane na serwer
     });
 });

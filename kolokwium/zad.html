@@ -38,16 +38,6 @@
                         <option value="advanced">Zaawansowany</option>
                     </select>
                 </div>
-
-                <div class="form-group"></div>
-                    <label for="pakiet_startowy">wybierz pakiet startowy:</label>
-                    <select id="pakiet_startowy" name="pakiet_startowy" required>
-                        <option value="">-- Wybierz poziom --</option>
-                        <option value="standardowy">standartowy</option>
-                        <option value="standart+">z pamiątkową koszulką</option>
-                        <option value="dls"> z dls(z dodatkiem do gry)</option>
-                    </select>
-                </div>
                 
                 <div class="form-group">
                     <label for="tournamentDate">Termin turnieju:</label>
@@ -60,14 +50,52 @@
                 </div>
                 
                 <div class="form-group">
+                    <label>Pakiet startowy:</label>
+                    <div class="starter-packages">
+                        <div class="package-option">
+                            <input type="radio" id="packageBasic" name="starterPackage" value="basic" checked>
+                            <label for="packageBasic" class="package-label">
+                                <span class="package-name">Podstawowy</span>
+                                <span class="package-price">+0 PLN</span>
+                                <span class="package-desc">(tylko udział w turnieju)</span>
+                            </label>
+                        </div>
+                        
+                        <div class="package-option">
+                            <input type="radio" id="packageStandard" name="starterPackage" value="standard">
+                            <label for="packageStandard" class="package-label">
+                                <span class="package-name">Standard</span>
+                                <span class="package-price">+15 PLN</span>
+                                <span class="package-desc">(figurka + karta wyników)</span>
+                            </label>
+                        </div>
+                        
+                        <div class="package-option">
+                            <input type="radio" id="packagePremium" name="starterPackage" value="premium">
+                            <label for="packagePremium" class="package-label">
+                                <span class="package-name">Premium</span>
+                                <span class="package-price">+30 PLN</span>
+                                <span class="package-desc">(figurka + karta + notes)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
                     <div class="checkbox-group">
                         <input type="checkbox" id="terms" name="terms" required>
                         <label for="terms">Akceptuję regulamin turnieju</label>
                     </div>
                 </div>
                 
-                <div class="fee-display" id="feeDisplay">
-                    Wpisowe: 20 PLN
+                <div class="fee-summary">
+                    <div class="fee-breakdown">
+                        <div>Koszt bazowy: <span id="baseFee">20</span> PLN</div>
+                        <div>Pakiet startowy: <span id="packageFee">0</span> PLN</div>
+                    </div>
+                    <div class="total-fee">
+                        Łączny koszt: <span id="totalFee">20</span> PLN
+                    </div>
                 </div>
                 
                 <button type="submit">Zapisz się</button>
